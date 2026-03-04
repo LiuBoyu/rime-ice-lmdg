@@ -49,16 +49,16 @@ patch:
   # 把命中的英文候选下沉到第 idx 位之后。
   # 雾凇默认：2。
   # 建议：轻度抑制 2，均衡 3，强抑制 4。
-  reduce_english_filter/idx: 3
+  reduce_english_filter/idx: 4
 
   # 英文翻译器权重。
   # 雾凇默认：1.1。
-  # 建议：均衡 0.8~1.0，中文优先 0.6~0.8，英语频繁输入 1.0~1.2。
-  melt_eng/initial_quality: 0.8
+  # 软关闭建议：0.05~0.2（越低越不容易出现在前排）。
+  melt_eng/initial_quality: 0.05
   # 中英混输翻译器权重。
   # 雾凇默认：0.5。
-  # 建议：中文优先 0.2~0.3，均衡 0.3~0.4，混输频繁 0.4~0.6。
-  cn_en/initial_quality: 0.2
+  # 软关闭建议：0.01~0.1（通常低于 melt_eng，避免混输词抢前排）。
+  cn_en/initial_quality: 0.01
 
   # ===== 自定义短语 =====
   # 自定义短语改为 tabledb：允许短语动态调频学习
