@@ -5,6 +5,7 @@ dist/
 
 build/
 sync/
+repos/RIME-LMDG/
 *.userdb/
 installation.yaml
 user.yaml

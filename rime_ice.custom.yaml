@@ -63,3 +63,10 @@ patch:
   # ===== 自定义短语 =====
   # 自定义短语改为 tabledb：允许短语动态调频学习
   custom_phrase/db_class: tabledb
+
+  # ===== 词典策略开关 =====
+  # 主词典入口：
+  # - rime_ice      -> 仅雾凇原词库（最稳）
+  # - rime_ice_lmdg -> 雾凇 + LMDG 聚合词库（词汇覆盖更强）
+  # 建议：先用 rime_ice_lmdg 观察 3~7 天；若噪声升高可临时切回 rime_ice。
+  translator/dictionary: rime_ice_lmdg

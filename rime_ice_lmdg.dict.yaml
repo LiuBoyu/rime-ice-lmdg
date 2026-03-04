@@ -1,0 +1,43 @@
+# Rime dictionary
+# encoding: utf-8
+
+# 说明：
+# - 该词典用于在雾凇基础上挂载 LMDG 词库（聚合入口）。
+# - 词库顺序会影响同码候选优先级，越靠前通常越容易靠前。
+# - 建议先用 core（jichu/duoyin/lianxiang/cuoyin），稳定后再开启 all 扩展。
+
+---
+name: rime_ice_lmdg
+version: "20260305-021133"
+import_tables:
+  - cn_dicts/8105                 # 雾凇常用字表（基础单字）
+  - cn_dicts/base                 # 雾凇基础词库（核心日常词）
+  - cn_dicts/ext                  # 雾凇扩展词库（补充常用词）
+  - cn_dicts/lmdg/lmdg_jichu      # LMDG 基础词库（2-3 字主力）
+  - cn_dicts/lmdg/lmdg_duoyin     # LMDG 多音兼容词库
+  - cn_dicts/lmdg/lmdg_lianxiang  # LMDG 长词联想词库（5 字及以上）
+  - cn_dicts/tencent              # 雾凇腾讯词向量词库（大词库）
+  - cn_dicts/others               # 雾凇杂项词库
+
+  # 以下为 all 扩展（按需启用，若觉得候选噪声变大可先注释）
+  - cn_dicts/lmdg/lmdg_renming    # LMDG 人名词库
+  - cn_dicts/lmdg/lmdg_diming     # LMDG 地名词库
+  - cn_dicts/lmdg/lmdg_shici      # LMDG 诗词词库
+  - cn_dicts/lmdg/lmdg_wuzhong    # LMDG 物种词库
+
+  - cn_dicts/lmdg/lmdg_cuoyin     # LMDG 错音错字兼容词库（建议放后）
+
+# 开关说明：
+# 1) 启用本词典：
+#    在 rime_ice.custom.yaml 中设置
+#    patch:
+#      translator/dictionary: rime_ice_lmdg
+#
+# 2) 回退雾凇原词典：
+#    将上述值改回 rime_ice，或注释该行。
+#
+# 3) core / all 切换：
+#    - core: 保留 jichu/duoyin/lianxiang/cuoyin
+#    - all : 额外启用 renming/diming/shici/wuzhong
+#    可直接注释/取消注释对应 import_tables 条目。
+...
