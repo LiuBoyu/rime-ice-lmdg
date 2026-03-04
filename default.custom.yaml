@@ -1,0 +1,24 @@
+# Rime default custom settings
+# encoding: utf-8
+
+patch:
+  # 只保留全拼方案，减少方案切换与维护成本
+  schema_list:
+    - schema: rime_ice
+
+  # 候选条数（每页显示数量）。
+  # 雾凇默认：5。
+  # 建议：紧凑 5~7，均衡 9，信息密集 10（候选多但视觉负担更大）。
+  menu/page_size: 9
+  # 方案菜单不折叠（只有一个方案时更直观）
+  switcher/fold_options: false
+
+  # 键盘优化（精简版）：只保留必要翻页键
+  # 注意：这里是整段覆盖 default.yaml 的 bindings
+  key_binder/bindings:
+    # Tab 翻页：Shift+Tab 上一页，Tab 下一页（主用）
+    - { when: has_menu, accept: Shift+Tab, send: Page_Up }
+    - { when: has_menu, accept: Tab, send: Page_Down }
+    # 备用翻页：,/.（避免个别场景 Tab 不便）
+    - { when: has_menu, accept: comma, send: Page_Up }
+    - { when: has_menu, accept: period, send: Page_Down }

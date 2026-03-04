@@ -1,0 +1,46 @@
+# Squirrel custom settings (macOS)
+# encoding: utf-8
+
+patch:
+  keyboard_layout: default                          # 英文键盘布局：系统默认 ABC/US
+  show_notifications_when: appropriate              # 通知时机：仅在必要时显示
+
+  style:
+    color_scheme: macos_light                       # 浅色主题名
+    color_scheme_dark: macos_dark                   # 深色主题名
+    candidate_list_layout: linear                   # 候选排列：横向
+    text_orientation: horizontal                    # 文本方向：横排
+    inline_preedit: true                            # 编码行内显示
+    inline_candidate: false                         # 候选不行内显示
+    candidate_format: "[label]. [candidate]"        # 候选格式：序号+候选（不显示注释）
+
+  preset_color_schemes:
+    macos_dark:
+      name: Mac深色                                 # 主题显示名称
+      font_face: "PingFangSC"                       # 候选字体
+      font_point: 16                                # 候选字号
+      label_font_face: "Helvetica"                  # 序号字体
+      label_font_point: 12                          # 序号字号
+      back_color: 0x050505                          # 背景色
+      border_color: 0x050505                        # 边框色
+      candidate_text_color: 0xE9E9EA                # 候选文字色
+      comment_text_color: 0x999999                  # 注释文字色
+      label_color: 0x999999                         # 序号颜色
+      hilited_back_color: 0xD75A00                  # 高亮背景色
+      hilited_candidate_text_color: 0xFFFFFF        # 高亮候选文字色
+      hilited_candidate_label_color: 0xFFFFFF       # 高亮序号颜色
+
+    macos_light:
+      name: Mac浅色                                 # 主题显示名称
+      font_face: "PingFangSC"                       # 候选字体
+      font_point: 16                                # 候选字号
+      label_font_face: "Helvetica"                  # 序号字体
+      label_font_point: 12                          # 序号字号
+      back_color: 0xFFFFFF                          # 背景色
+      border_color: 0xFFFFFF                        # 边框色
+      candidate_text_color: 0x3C3C3C                # 候选文字色
+      comment_text_color: 0x999999                  # 注释文字色
+      label_color: 0x999999                         # 序号颜色
+      hilited_back_color: 0xD75A00                  # 高亮背景色
+      hilited_candidate_text_color: 0xFFFFFF        # 高亮候选文字色
+      hilited_candidate_label_color: 0xFFFFFF       # 高亮序号颜色
